@@ -1,1 +1,9 @@
-<p>education works!</p>
+<h2 class="shadow-title">Education</h2>
+<ul *ngFor="let job of education;">
+    <li>
+      {{ job.admissionDate }} - {{ job.gradationDate }}  <br>
+      <b>{{ job.carrer }}</b> <br>
+      {{ job.institutionName }} <br>
+    </li>
+  </ul>
+  

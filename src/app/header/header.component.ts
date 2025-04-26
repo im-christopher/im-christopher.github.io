@@ -13,7 +13,7 @@ export class HeaderComponent {
   header: Header = new Header();
 
   constructor(public headerService: HeaderService) {
-    console.log(this.headerService);
+   // console.log(this.headerService);
     this.headerService.getHeader().snapshotChanges().pipe(
       map(changes =>
         changes.map(c =>
@@ -22,6 +22,7 @@ export class HeaderComponent {
       )
     ).subscribe(data => {
       this.header = data[0];
+console.log(this.header.name);
       console.log(this.header);
     });
   }
