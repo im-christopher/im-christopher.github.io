@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HeaderService } from '../services/header-service/header.service';
 import { Header } from '../models/header/header.model';
 import { map } from 'rxjs/operators';
+import { DocumentChangeAction } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-header',
@@ -15,9 +16,9 @@ export class HeaderComponent {
   constructor(public headerService: HeaderService) {
    // console.log(this.headerService);
     this.headerService.getHeader().snapshotChanges().pipe(
-      map(changes =>
+      map((changes: DocumentChangeAction<Header>[]) =>
         changes.map(c =>
-          ({ id: c.payload.doc.id, ...c.payload.doc.data() })
+          ({ id: c.payload.doc.id, ...c.payload.doc.data() } as Header)
         )
       )
     ).subscribe(data => {

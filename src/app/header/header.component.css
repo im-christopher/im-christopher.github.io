@@ -1,0 +1,102 @@
+/* You can add global styles to this file, and also import other style files */
+/* 🌊 Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f5; /* Fondo claro */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* 🔷 Encabezado principal */
+.app-header {
+    background-color: #1a1a4b; /* Azul marino */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+/* 📜 Contenedor principal */
+.cv-container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 50, 0.1);
+}
+
+/* 📷 Información personal */
+.personal-info {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a4b;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.personal-info img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border: 2px solid white;
+}
+
+.personal-info div {
+    flex-grow: 1;
+}
+
+.personal-info div p {
+    margin: 5px 0;
+}
+
+/* 🏗 Secciones del CV */
+.section {
+    background-color: #e6e6ff; /* Azul claro */
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.section h2 {
+    color: #1a1a4b;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* 🎭 Listas */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* 📜 Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* 📞 Contacto */
+.contact {
+    text-align: center;
+    background-color: #1a1a4b;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
