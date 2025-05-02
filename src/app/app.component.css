@@ -1,0 +1,47 @@
+/* 🌊 Fondo azul marino en toda la aplicación */
+body {
+    background-color: #1a1a4b; /* Azul marino */
+    background: linear-gradient(to right, #1a1a4b, #34346e);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+/* 📜 Contenedor principal del CV */
+.cv-container {
+    background: white;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 50, 0.3);
+    text-align: center;
+}
+
+.cv-container {
+    box-shadow: 0 0 15px rgba(0, 0, 50, 0.3);
+}
+.cv-section {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+
+/* 📁 Secciones con azul marino */
+td {
+    background-color: #111a38;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 10px;
+}
+.cv-section:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+
+table {
+    width: 50%; /* 🔥 Reduce el ancho */
+    margin: auto; /* 🔥 Centra la tabla */
+    border-collapse: separate;
+    border-spacing: 10px;
+}

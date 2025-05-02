@@ -8,25 +8,21 @@ import { DocumentChangeAction } from '@angular/fire/compat/firestore';
   selector: 'app-header',
   standalone: false,
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  header: Header = new Header();
+  header!: Header; // Usa `!` para evitar valores undefined
+  isLoading: boolean = true; // Nueva variable para el estado de carga
 
   constructor(public headerService: HeaderService) {
-   // console.log(this.headerService);
     this.headerService.getHeader().snapshotChanges().pipe(
       map((changes: DocumentChangeAction<Header>[]) =>
-        changes.map(c =>
-          ({ id: c.payload.doc.id, ...c.payload.doc.data() } as Header)
-        )
+        changes.map(c => ({ id: c.payload.doc.id, ...c.payload.doc.data() } as Header))
       )
     ).subscribe(data => {
       this.header = data[0];
-console.log(this.header.name);
+      this.isLoading = false; // Marca la carga como completada
       console.log(this.header);
     });
   }
-
-
 }
