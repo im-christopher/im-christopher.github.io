@@ -7,6 +7,7 @@ import { ChangeDetectorRef, Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  title = 'mycv';
   constructor(private cd: ChangeDetectorRef) {}
 
   actualizarVista() {
